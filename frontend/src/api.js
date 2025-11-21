@@ -1,7 +1,7 @@
 // src/api.js
 
 // Change this to your Render backend URL
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:3000";
+const API_BASE = import.meta.env.VITE_API_BASE;
 
 // ---------- API CALLS ----------
 
