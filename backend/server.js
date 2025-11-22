@@ -25,10 +25,7 @@ app.use('/api/links', linksRouter);
 // Redirect route must be last
 app.get('/:code', redirectHandler);
 
-// Root (optional)
-app.get('/', (req, res) => {
-  res.send("TinyLink Backend Running");
-});
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
