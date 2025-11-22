@@ -39,9 +39,8 @@ export default function Dashboard() {
     setFiltered(results);
   }, [search, links]);
 
-  // Copy URL with feedback
   const handleCopy = async (code) => {
-    const url = `${import.meta.env.VITE_API_BASE || "http://localhost:3000"}/${code}`;
+    const url = `${window.location.origin}/${code}`;
     try {
       await navigator.clipboard.writeText(url);
       setCopyFeedback(code);

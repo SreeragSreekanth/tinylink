@@ -10,7 +10,8 @@ export default function Stats() {
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const BASE_URL = import.meta.env.VITE_API_BASE;
+  const shortUrl = `${window.location.origin}/${code}`;
+
 
   useEffect(() => {
     (async () => {
@@ -60,7 +61,6 @@ export default function Stats() {
     );
   }
 
-  const shortUrl = `${BASE_URL}/${code}`;
 
   return (
     <div className="space-y-6">
