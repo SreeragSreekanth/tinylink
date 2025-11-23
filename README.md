@@ -5,38 +5,6 @@ The project is organized into separate **backend** and **frontend** folders for 
 
 ---
 
-## 📁 Project Structure
-
-sreeragsreekanth-tinylink/
-├── backend/
-│ ├── package.json
-│ ├── package-lock.json
-│ ├── server.js
-│ ├── migrations/
-│ │ └── 001_create_links.sql
-│ └── src/
-│ ├── config/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ └── utils/
-└── frontend/
-├── package.json
-├── package-lock.json
-├── index.html
-├── vite.config.js
-├── vercel.json
-├── README.md
-├── public/
-└── src/
-├── api.js
-├── components/
-├── pages/
-└── assets/
-
-yaml
-Copy code
-
 ---
 
 ## 🚀 Overview
@@ -75,48 +43,44 @@ Copy code
 ```bash
 cd backend
 npm install
+```
 2. Configure PostgreSQL
-Create a .env file inside backend/:
-
-ini
-Copy code
+Create a .env file inside backend:
+```bash
 DATABASE_URL=your_postgres_url
 DB_SSL=true_or_false
-Run database migration:
-
-pgsql
-Copy code
-migrations/001_create_links.sql
+```
 3. Start Backend Server
-bash
-Copy code
+```bash
 node server.js
+```
 Frontend Setup
 1. Install Dependencies
-bash
-Copy code
+```bash
 cd frontend
 npm install
+```
 2. Start Dev Server
-bash
-Copy code
+```bash
 npm run dev
+```
 🌐 Deployment
 Frontend → Vercel
 Backend → Render
+
 Make sure to set these environment variables:
 
 Backend .env
-ini
-Copy code
+```bash
 DATABASE_URL=postgres_connection_string
 DB_SSL=true_or_false
+```
 Frontend .env
-ini
-Copy code
+```bash
 VITE_API_BASE=https://your-backend-url.com
+```
 Update vercel.json to point API routes to the backend.
-Ensure VITE_API_BASE is correctly configured in Vercel environment settings.
+Ensure VITE_API_BASE is set correctly in Vercel environment settings.
 
 🧰 Technologies Used
 Backend
@@ -137,4 +101,7 @@ Deployment
 Vercel (Frontend)
 
 Render (Backend)
+
+yaml
+Copy code
 
