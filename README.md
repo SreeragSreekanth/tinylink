@@ -5,7 +5,6 @@ The project is organized into separate **backend** and **frontend** folders for 
 
 ---
 
----
 
 ## 🚀 Overview
 
@@ -102,6 +101,4 @@ Vercel (Frontend)
 
 Render (Backend)
 
-yaml
-Copy code
 
