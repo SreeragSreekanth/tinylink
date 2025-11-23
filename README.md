@@ -1,8 +1,8 @@
 TinyLink
+
 TinyLink is a lightweight, full-stack URL shortener. It enables users to create short links for long URLs and track usage statistics. The project is organized with separate backend and frontend folders for clarity and scalability.
 
 Project Structure
-text
 sreeragsreekanth-tinylink/
 ├── backend/
 │   ├── package.json
@@ -29,58 +29,102 @@ sreeragsreekanth-tinylink/
         ├── components/
         ├── pages/
         └── assets/
-backend/: Node.js + Express server, PostgreSQL schema and models, REST API for CRUD operations on links.
 
-frontend/: React client with routing, UI components for link creation, listing, search, and stats.
+Overview
+Backend
+
+Node.js + Express server
+
+PostgreSQL schema and models
+
+REST API for CRUD operations on links
+
+Frontend
+
+React client with routing
+
+UI components for link creation, listing, search, and stats
 
 Features
-Shorten new URLs and generate codes (auto or custom, 6–8 characters, alphanumeric).
 
-Dashboard to list, search, and manage your links.
+Shorten new URLs and generate codes (auto or custom, 6–8 characters, alphanumeric)
 
-Copy short URLs to clipboard with one click.
+Dashboard to list, search, and manage links
 
-View usage statistics for each short link: clicks, last clicked, created date.
+Copy short URLs to clipboard with one click
 
-Delete links when no longer needed.
+View usage statistics:
+
+Total clicks
+
+Last clicked
+
+Created date
+
+Delete links when no longer needed
 
 Setup Instructions
 Backend
-Install dependencies:
-
-text
+1. Install dependencies
 cd backend
 npm install
-Set up PostgreSQL and create schema:
 
-Update your .env with DATABASE_URL.
+2. Set up PostgreSQL and create schema
 
-Run migration in migrations/001_create_links.sql.
+Create a .env file with:
 
-Start the server:
+DATABASE_URL=your_postgres_url
+DB_SSL=true_or_false
 
-text
+
+Run the migration:
+
+migrations/001_create_links.sql
+
+3. Start the server
 node server.js
-Frontend
-Install dependencies:
 
-text
+Frontend
+1. Install dependencies
 cd frontend
 npm install
-Start the development server:
 
-text
+2. Start development server
 npm run dev
-For deployment, adjust vercel.json (rewrites API to backend).
+
+Deployment
+
+Update vercel.json to point API routes to backend server
+
+Configure VITE_API_BASE in environment variables
 
 Environment Variables
-Backend: Use .env for database connection and SSL settings (DATABASE_URL, DB_SSL).
+Backend (.env)
+DATABASE_URL=postgres_connection_string
+DB_SSL=true_or_false
 
-Frontend: Uses VITE_API_BASE for API endpoint configuration.
+Frontend (.env)
+VITE_API_BASE=https://your-backend-url.com
 
 Technologies Used
-Backend: Node.js, Express, PostgreSQL
+Backend
 
-Frontend: React, Vite, Tailwind CSS
+Node.js
 
-Deployment: Vercel, Render (backend)
+Express
+
+PostgreSQL
+
+Frontend
+
+React
+
+Vite
+
+Tailwind CSS
+
+Deployment
+
+Vercel (frontend)
+
+Render (backend)
